@@ -3,3 +3,6 @@ node_modules/
 .vscode
 .env
 *.log
+asterisk-logs/*
+
+.DS_store

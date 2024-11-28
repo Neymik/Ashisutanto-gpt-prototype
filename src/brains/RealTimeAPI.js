@@ -14,7 +14,7 @@ if (!API_KEY) {
 }
 
 class RealTimeAPI {
-  constructor(inputAudioStream) {
+  constructor(inputAudioStream, format = 'pcm16') {
     this.client = new RealtimeClient({
       apiKey: API_KEY,
       model: 'gpt-4o-realtime-preview-2024-10-01',
@@ -29,8 +29,8 @@ class RealTimeAPI {
       },
       modalities: ["text", "audio"],
       // input_audio_transcription: { "model": "whisper-1" },
-      input_audio_format: "pcm16",
-      output_audio_format: "pcm16",
+      input_audio_format: format,
+      output_audio_format: format,
       max_response_output_tokens: 500,
 
       instructions: `Ты остроумным ИИ для игрового сервера Discord. Ты всегда общаешься в быстром темпе, используешь игровой сленг, поддерживаешь живое взаимодействие и общаешься быстро в игривом тоне.
