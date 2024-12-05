@@ -26,3 +26,5 @@ sudo tcpdump -i any udp portrange 10000-20000
 
 echo "Hello, server" | nc -u host.docker.internal 10500
 
+systemctl restart asterisk
+

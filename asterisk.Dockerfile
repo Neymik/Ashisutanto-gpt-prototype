@@ -3,7 +3,7 @@ LABEL maintainer='Doug Smith <info@laboratoryb.org>' contributors='Christophe La
 ENV build_date 2017-03-01
 
 # Copy in default configs
-COPY http.conf /etc/asterisk/http.conf
+COPY asterisk-conf/http.conf /etc/asterisk/http.conf
 
 RUN yum update -y \
     && yum install -y \
